@@ -43,9 +43,9 @@ export const { hide, reveal, reveals } = (() => {
 	};
 	Object.freeze(cls);
 	Object.freeze(cls.prototype);
-	return Object.freeze({
+	return {
 		hide: (k, v) => Object.freeze(new cls(k, v)), // Hide a value
 		reveal: (k, v) => new cls(k).reveal(v), // Reveal a value
 		reveals: (k, v) => new cls(k).reveals(v) // Can we reveal a value?
-	});
+	};
 })();
