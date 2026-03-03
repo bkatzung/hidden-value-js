@@ -41,6 +41,7 @@ export const { hide, reveal, reveals } = (() => {
 			return (hv instanceof cls && this.#key === hv.#key);
 		}
 	};
+	Object.freeze(cls);
 	Object.freeze(cls.prototype);
 	return Object.freeze({
 		hide: (k, v) => Object.freeze(new cls(k, v)), // Hide a value
